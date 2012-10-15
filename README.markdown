@@ -7,8 +7,8 @@ This is an Symphony CMS extension that adds a textarea field with a default valu
 ---------------------------------------
 
 ## Info
-- Version:	0.1
-- Date:		2011-01-12
+- Version:	0.2
+- Date:		2012-10-15
 - Author:	João Barbosa
 - E-mail:	<joao.ofb@gmail.com>
 - Website:	<http://www.joaootavio.com.br>
@@ -32,6 +32,9 @@ This is an Symphony CMS extension that adds a textarea field with a default valu
 ---------------------------------------
 
 ## Changelog
+
+### 0.2
+- Symphony 2.3
 
 ### 0.1
 - First Release

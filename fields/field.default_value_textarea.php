@@ -6,12 +6,9 @@
 	
 	Class fielddefault_value_textarea extends fieldTextarea{
 	
-		function __construct(&$parent){
-
-			parent::__construct($parent);
-			$this->_name = __('Default Value Textarea');		
+		function __construct(){
+			$this->_name = __('Default Value Textarea');
 			$this->_required = true;
-
 			$this->set('show_column', 'no');
 			$this->set('required', 'yes');
 		}
@@ -65,11 +62,15 @@
 			$label = Widget::Label($this->get('label'));
 			if($this->get('required') != 'yes') $label->appendChild(new XMLElement('i', __('Optional')));
 
-			$textarea = Widget::Textarea('fields'.$fieldnamePrefix.'['.$this->get('element_name').']'.$fieldnamePostfix, $this->get('size'), '50', (strlen($data['value']) != 0 ? General::sanitize($data['value']) : $this->_fields['default-value']));
+			$textarea = Widget::Textarea('fields'.$fieldnamePrefix.'['.$this->get('element_name').']'.$fieldnamePostfix, 
+										intval($this->get('size')), // rows
+										50, 						// cols
+										(strlen($data['value']) != 0 ? General::sanitize($data['value']) : $this->_fields['default-value'])
+									);
 
 			if($this->get('formatter') != 'none') $textarea->setAttribute('class', $this->get('formatter'));
 
-			$this->_engine->ExtensionManager->notifyMembers('ModifyTextareaFieldPublishWidget', '/backend/', array('field' => &$this, 'label' => &$label, 'textarea' => &$textarea));
+			Symphony::ExtensionManager()->notifyMembers('ModifyTextareaFieldPublishWidget', '/backend/', array('field' => &$this, 'label' => &$label, 'textarea' => &$textarea));
 
 			$label->appendChild($textarea);
 

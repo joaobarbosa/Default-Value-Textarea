@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="default_value_textarea" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Default Value Textarea</name>
+	<description>Adds a textarea field with a default value option.</description>
+	<repo type="github">https://github.com/DeuxHuitHuit/default_value_textarea</repo>
+	<repo type="github">https://github.com/joaobarbosa/Default-Value-Textarea</repo>
+	<types>
+		<type>Field</type>
+	</types>
+	<authors>
+		<author>
+			<name github="joaobarbosa">João Barbosa</name>
+			<website>https://github.com/joaobarbosa</website>
+		</author>
+		<author>
+			<name github="DeuxHuitHuit" symphony="">Deux Huit Huit</name>
+			<website>http://www.deuxhuithuit.com</website>
+		</author>
+	</authors>
+	<dependencies>
+		<!-- None -->
+	</dependencies>
+	<releases>
+		<release version="0.2" date="2012-10-15" min="2.3">  
+			- Updated for Symphony 2.3 
+		</release>  
+		<release version="0.1" date="2011-01-12" min="2.2" max="2.2.5">  
+			- First Release
+		</release>
+	</releases>
+</extension>
